@@ -5,7 +5,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://matscard-art-store.netlify.app/",
     title: "Art Store",
     author: `@matscard`,
   },
