@@ -1,10 +1,17 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Art Store",
+    author: `@matscard`,
   },
   plugins: [
     "gatsby-plugin-image",
+    `gatsby-plugin-stripe`,
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
@@ -23,5 +30,12 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ['Price'],
+        secretKey: process.env.STRIPE_SK,
+      }
+    }
   ],
 };
