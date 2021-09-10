@@ -17,7 +17,7 @@ export default function Cart() {
   }
 
   useEffect(() => {
-    console.log(env.STRIPE_PK)
+    console.log(process.env)
     setStripe(window.Stripe(`${process.env.STRIPE_PK}`))
     getTotal()
   }
