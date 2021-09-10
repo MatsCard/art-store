@@ -17,7 +17,6 @@ export default function Cart() {
   }
 
   useEffect(() => {
-    console.log(process.env)
     setStripe(window.Stripe(`${process.env.STRIPE_PK}`))
     getTotal()
   }
@@ -34,8 +33,8 @@ export default function Cart() {
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
       mode: 'payment',
-      successUrl: process.env.SUCCESS_REDIRECT,
-      cancelUrl: process.env.CANCEL_REDIRECT,
+      successUrl: `${process.env.SUCCESS_REDIRECT}`,
+      cancelUrl: `${process.env.CANCEL_REDIRECT}`,
     })
     if (error) {
       throw error
