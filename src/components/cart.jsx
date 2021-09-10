@@ -17,7 +17,7 @@ export default function Cart() {
   }
 
   useEffect(() => {
-    setStripe(window.Stripe(`${process.env.STRIPE_PK}`))
+    setStripe(window.Stripe(process.env.STRIPE_PK))
     getTotal()
   }
   , [])
@@ -33,8 +33,8 @@ export default function Cart() {
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
       mode: 'payment',
-      successUrl: `${process.env.SUCCESS_REDIRECT || 'https://matscard-art-store.netlify.app/success'}`,
-      cancelUrl: `${process.env.CANCEL_REDIRECT || 'https://matscard-art-store.netlify.app/cancel'}`,
+      successUrl: process.env.SUCCESS_REDIRECT,
+      cancelUrl: process.env.CANCEL_REDIRECT,
     })
     if (error) {
       throw error
