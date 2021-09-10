@@ -24,7 +24,7 @@ export default function Cart() {
 
   const handleSubmit = async e => {
     console.log(process.env)
-    console.log(process.env.SUCCESS_REDIRECT)
+    console.log(`${process.env.SUCCESS_REDIRECT}`)
     e.preventDefault()
 
     const item = cart.map(({ id, qty }) => ({
@@ -35,8 +35,8 @@ export default function Cart() {
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
       mode: 'payment',
-      successUrl: process.env.SUCCESS_REDIRECT,
-      cancelUrl: process.env.CANCEL_REDIRECT,
+      successUrl: `${process.env.SUCCESS_REDIRECT}`,
+      cancelUrl: `${process.env.CANCEL_REDIRECT}`,
     })
     if (error) {
       throw error
