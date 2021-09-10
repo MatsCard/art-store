@@ -6,7 +6,7 @@ import './success.css'
 export default function gracias() {
   return (
     <div>
-      <SEO title='Compra Existosa'/>
+      <SEO title='Completed purchase'/>
       <div className="purchase text-center">
         <h2>Your purchase was completed</h2>
         <p>Keep buying so you look more elegant</p>

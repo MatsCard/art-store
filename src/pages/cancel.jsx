@@ -6,7 +6,7 @@ import './success.css'
 export default function cancelar() {
   return (
     <div>
-      <SEO title='Compra cancelada'/>
+      <SEO title='Order cancelled'/>
       <div className="purchase text-center">
         <h1>Order cancelled</h1>
         <span role='img' aria-label='emoji'>💔</span>
