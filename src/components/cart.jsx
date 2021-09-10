@@ -23,6 +23,7 @@ export default function Cart() {
   , [])
 
   const handleSubmit = async e => {
+    console.log(process.env.SUCCESS_REDIRECT)
     e.preventDefault()
 
     const item = cart.map(({ id, qty }) => ({
