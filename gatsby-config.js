@@ -11,15 +11,11 @@ module.exports = {
     title: "Art Store",
     author: `@matscard`,
   },
-  configureWebpack: {
-    plugins: [
-      new Dotenv({
-        path: "./.env", // load this now instead of the ones in '.env'
-        systemvars: true
-      })
-    ]
-  },
   plugins: [
+    new Dotenv({
+      path: "./.env", // load this now instead of the ones in '.env'
+      systemvars: true
+    }),
     "gatsby-plugin-image",
     `gatsby-plugin-stripe`,
     "gatsby-plugin-react-helmet",
