@@ -19,6 +19,7 @@
     "@popperjs/core": "^2.10.1",
     "bootstrap": "^5.1.1",
     "dotenv": "^10.0.0",
+    "dotenv-webpack": "^7.0.3",
     "gatsby": "^3.13.0",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.13.0",

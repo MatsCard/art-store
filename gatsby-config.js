@@ -1,13 +1,23 @@
-require("dotenv").config({
+/* require("dotenv").config({
   path: `.env`,
  })
-
+ */
+const path = require("path");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   siteMetadata: {
     siteUrl: "https://matscard-art-store.netlify.app/",
     title: "Art Store",
     author: `@matscard`,
+  },
+  configureWebpack: {
+    plugins: [
+      new Dotenv({
+        path: "./.env", // load this now instead of the ones in '.env'
+        systemvars: true
+      })
+    ]
   },
   plugins: [
     "gatsby-plugin-image",
