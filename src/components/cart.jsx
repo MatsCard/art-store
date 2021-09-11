@@ -36,7 +36,7 @@ export default function Cart() {
       successUrl: process.env.SUCCESS_REDIRECT,
       cancelUrl: process.env.CANCEL_REDIRECT,
    })
-    if (error) {
+   if (error) {
       throw error
     }
   }

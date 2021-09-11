@@ -1,5 +1,0 @@
-[[plugins]]
-package = "netlify-plugin-inline-functions-env"
-
-[functions]
-  directory = "/"
