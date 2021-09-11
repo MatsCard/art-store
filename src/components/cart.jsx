@@ -15,6 +15,8 @@ export default function Cart() {
   const success = `${process.env.SUCCESS_REDIRECT}`
   const cancel = `${process.env.CANCEL_REDIRECT}`
 
+  
+
   const getTotal = () => {
     setTotal(
       cart.reduce((acc, current) => acc + current.unit_amount * current.qty, 0)
@@ -28,6 +30,7 @@ export default function Cart() {
   , [])
 
   const handleSubmit = async e => {
+    console.log(success)
     e.preventDefault()
 
     const item = cart.map(({ id, qty }) => ({
