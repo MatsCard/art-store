@@ -26,22 +26,6 @@ main .main-input-container:hover {
   border-color: #dfe1e500;
 }
 
-@media screen and (min-width: 767px) {
-  main .main-input {
-    width: 530px;
-  }
-  
-  main .main-input-container {
-    width: 525px;
-  
-  }
-  main .main-input input {
-    width: 480px;
-  }
-
-  
-}
-
 
 @media screen and (min-width: 425px) {
   main .main-input {
@@ -54,6 +38,22 @@ main .main-input-container:hover {
   }
   main .main-input input {
     width: 280px;
+  }
+
+  
+}
+
+@media screen and (min-width: 1023px) {
+  main .main-input {
+    width: 530px;
+  }
+  
+  main .main-input-container {
+    width: 525px;
+  
+  }
+  main .main-input input {
+    width: 480px;
   }
 
   

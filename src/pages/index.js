@@ -89,31 +89,16 @@ const IndexPage = ({data}) => {
   ]
 
 
-  const setting = {
-    dragSpeed: 1.25,
-    itemWidth: 200,
-    itemHeight: 250,
-    itemSideOffsets: 2,
-  }
-
-  const itemStyle = {
-    width: `${setting.itemWidth}px`,
-    height: `${setting.itemHeight}px`,
-    margin: `0px ${setting.itemSideOffsets}px`
-  }
-
   return(
     <>
       <SEO title='Home' />
       <Jumbo />
       <Products products={data.allStripePrice.edges} />
-        <Carousel _data={items} {...setting}>
+        <Carousel>
           {
             items.map((i, _i) => (
               <CarouselItem 
               key={_i}
-              className='item'
-              style={itemStyle }
               src={i.src}
               title={i.title} />
             ))

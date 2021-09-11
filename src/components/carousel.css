@@ -1,23 +1,47 @@
-.carousel {
-  overflow: scroll;
-  padding-left: 30px;
-  width: 100%;
-  position: relative;
-}
 
-.carousel__container {
-  transition: 450ms -webkit-transform;
-  transition: 450ms transform;
-  transition: 450ms transform, 450ms -webkit-transform;
-  font-size: 0;
-  white-space: nowrap;
-  margin: 70px 0px;
-  padding-bottom: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
-  justify-content: center;
-  gap: 75px;
-  
-}
+  .main {
+    background-color: lighten(skyblue, 60%);
+    padding: 0;
+    overflow-x: scroll;/* 
+    overflow-y: hidden; */
+  }
+
+  .items {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: pointer;
+    padding: 25px 0;
+    height: 450px;
+  }
 
 
+  .items.active {
+    background: rgba(255,255,255,0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+
+  .item {
+    display: inline-block;
+    background: skyblue;
+    min-height: 250px;/* 
+    min-width: 400px; */
+    margin: 2em 1em;
+    padding: 0;
+  }
+
+
+
+
+
+  .items::-webkit-scrollbar{
+    display: none;
+  }

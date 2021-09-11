@@ -1,12 +1,11 @@
 .footer-container {
   background-color: var(--main-color);
-  font-family: 'lucida calligraphy';
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  font-family: 'Candara';
+  color: white;
 }
 
 .footer-container a {
-  color: var(--bs-body-color);
+  color: white;
   text-decoration: none;
 }
 
@@ -16,5 +15,9 @@
 }
 
 .footer-license {
-  border-top: 2px solid var(--secondary-color);
+  border-top: 2px solid #1883ba;
+}
+
+.footer-title {
+  font-weight: bold;
 }

@@ -1,0 +1,9 @@
+.link-home {
+  color: var(--main-color);;
+  text-decoration: none;
+}
+
+.link-home:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}

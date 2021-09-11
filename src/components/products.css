@@ -54,8 +54,15 @@
     }
   .products section {
     display: grid;
-    grid-gap: 2rem;
-    width: 100%;
+    grid-gap: 2rem;/* 
+    width: 100%; */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding: 0;
   }
+
+@media screen and (min-width: 767px){
+  .products section {
+    width: 100%; 
+  }
+  
+}
