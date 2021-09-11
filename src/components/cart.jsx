@@ -10,6 +10,11 @@ export default function Cart() {
   const [total, setTotal] = useState(0)
   const [stripe, setStripe] = useState()
 
+
+  const stripe_pk = `${process.env.STRIPE_PK}`
+  const success = `${process.env.SUCCESS_REDIRECT}`
+  const cancel = `${process.env.CANCEL_REDIRECT}`
+
   const getTotal = () => {
     setTotal(
       cart.reduce((acc, current) => acc + current.unit_amount * current.qty, 0)
@@ -17,7 +22,7 @@ export default function Cart() {
   }
 
   useEffect(() => {
-    setStripe(window.Stripe(process.env.STRIPE_PK))
+    setStripe(window.Stripe(stripe_pk))
     getTotal()
   }
   , [])
@@ -33,8 +38,8 @@ export default function Cart() {
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
       mode: 'payment',
-      successUrl: process.env.SUCCESS_REDIRECT,
-      cancelUrl: process.env.CANCEL_REDIRECT,
+      successUrl: success,
+      cancelUrl: cancel,
    })
    if (error) {
       throw error
