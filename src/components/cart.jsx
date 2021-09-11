@@ -11,9 +11,9 @@ export default function Cart() {
   const [stripe, setStripe] = useState()
 
 
-  const stripe_pk = `${process.env.STRIPE_PK}`
-  const success = `${process.env.SUCCESS_REDIRECT}`
-  const cancel = `${process.env.CANCEL_REDIRECT}`
+  const stripe_pk = `${process.env.STRIPE_PK || STRIPE_PK}`
+  const success = `${process.env.SUCCESS_REDIRECT || SUCCESS_REDIRECT}`
+  const cancel = `${process.env.CANCEL_REDIRECT ||CANCEL_REDIRECT}`
 
   
 
@@ -40,8 +40,8 @@ export default function Cart() {
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
       mode: 'payment',
-      successUrl: 'https://matscard-art-store.netlify.app/success/',
-      cancelUrl: 'https://matscard-art-store.netlify.app/cancel/',
+      successUrl: success,
+      cancelUrl: cancel,
    })
    if (error) {
       throw error

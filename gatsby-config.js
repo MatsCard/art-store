@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-source-stripe`,
       options: {
         objects: ['Price'],
-        secretKey: process.env.STRIPE_SK,
+        secretKey: process.env.STRIPE_SK || STRIPE_SK,
       }
     }
   ],
