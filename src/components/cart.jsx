@@ -11,9 +11,9 @@ export default function Cart() {
   const [stripe, setStripe] = useState()
 
 
-  const stripe_pk = `${process.env.STRIPE_PK || STRIPE_PK}`
-  const success = `${process.env.SUCCESS_REDIRECT || SUCCESS_REDIRECT}`
-  const cancel = `${process.env.CANCEL_REDIRECT ||CANCEL_REDIRECT}`
+  const stripe_pk = `${process.env.STRIPE_PK}`
+  const success = `${process.env.SUCCESS_REDIRECT}`
+  const cancel = `${process.env.CANCEL_REDIRECT}`
 
   
 
