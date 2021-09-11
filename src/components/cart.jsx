@@ -40,8 +40,8 @@ export default function Cart() {
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
       mode: 'payment',
-      successUrl: success,
-      cancelUrl: cancel,
+      successUrl: 'https://matscard-art-store.netlify.app/success/',
+      cancelUrl: 'https://matscard-art-store.netlify.app/cancel/',
    })
    if (error) {
       throw error
