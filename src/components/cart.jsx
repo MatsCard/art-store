@@ -31,6 +31,10 @@ export default function Cart() {
       quantity: qty,
     }))
 
+    console.log(item)
+    console.log(process.env.SUCCESS_REDIRECT)
+    console.log(typeof (process.env.SUCCESS_REDIRECT))
+
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
       mode: 'payment',
