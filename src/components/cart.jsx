@@ -18,7 +18,7 @@ export default function Cart() {
   }
 
   useEffect(() => {
-    setStripe(window.Stripe(String(process.env.STRIPE_PK)))
+    setStripe(window.Stripe(process.env.GATSBY_STRIPE_PK))
     getTotal()
   }
   , [])
@@ -32,8 +32,8 @@ export default function Cart() {
     }))
 
     console.log(item)
-    console.log(String(process.env.SUCCESS_REDIRECT))
-    console.log(typeof (process.env.SUCCESS_REDIRECT))
+    console.log(process.env.GATSBY_SUCCESS_REDIRECT)
+    console.log(typeof (process.env.GATSBY_SUCCESS_REDIRECT))
     console.log(stripe)
 
     const { error } = await stripe.redirectToCheckout({
