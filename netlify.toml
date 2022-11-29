@@ -1,5 +1,0 @@
-[build.environment]
-  STRIPE_SK = sk_test_51JXWOyL02amjbpolqdcNe1BFDCWksjbwbe7gmGf3xth4kIHqmPvMqNAoBwz2Zd6pFe9X46I2RcMUfLnlpwyUjQu300GTX9drJg
-  STRIPE_PK = pk_test_51JXWOyL02amjbpolPETBpsAhP4bmuvwYmpRgIxvOy3dZEo88evIBvWvEOoQ3ZJGa5FDAgh3FA0mncN2J1LdAEeQe00NEJKKqOd
-  SUCCESS_REDIRECT='https://matscard-art-store.netlify.app/success'
-  CANCEL_REDIRECT='https://matscard-art-store.netlify.app/cancel'
