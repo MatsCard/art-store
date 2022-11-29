@@ -32,14 +32,17 @@ export default function Cart() {
     }))
 
     console.log(item)
-    console.log(process.env.SUCCESS_REDIRECT)
+    console.log(String(process.env.SUCCESS_REDIRECT))
     console.log(typeof (process.env.SUCCESS_REDIRECT))
+    console.log(stripe)
 
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
-      mode: 'payment',
+      mode: 'payment',/* 
       successUrl: process.env.SUCCESS_REDIRECT,
-      cancelUrl: process.env.CANCEL_REDIRECT,
+      cancelUrl: process.env.CANCEL_REDIRECT, */
+      successUrl: "https://matscard-art-store.netlify.app/success",
+      cancelUrl: "https://matscard-art-store.netlify.app/cancel",
    })
    if (error) {
       throw error
