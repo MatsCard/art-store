@@ -1,0 +1,13 @@
+.nav-phone {
+  display: none;
+}
+
+.fa-phone {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 767px) {
+  .nav-phone {
+    display: initial;
+  }
+}

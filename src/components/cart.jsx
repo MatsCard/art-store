@@ -3,7 +3,7 @@ import { Link } from 'gatsby'/*
 import { Button, StyledCart } from '../styles/components' */
 import priceFormat from '../utils/priceFormat'
 import { CartContext } from '../context'
-import './cart.css'
+import './cart.scss'
 
 export default function Cart() {
   const { cart } = useContext(CartContext)
@@ -43,20 +43,21 @@ export default function Cart() {
   }
 
   return (
-    <section className="styled-cart container">
-      <h2>Your Cart</h2>
-      <table>
+    <section className="cart container">
+      <h1 className="cart-title">Your Cart</h1>
+      <table className="cart-table">
         <tbody>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Qty.</th>
-            <th>Total</th>
+          <tr className="cart-table-titles">
+            <th className="cart-column">Product</th>
+            <th className="cart-column">Price</th>
+            <th className="cart-column">Qty.</th>
+            <th className="cart-column">Total</th>
           </tr>
+
           {cart.map(swag => (
             <tr key={swag.id}>
-              <td>
-                <img className="styled-cart-img"src={swag.metadata.img} alt={swag.name}/>
+              <td >
+                <img className="cart-img"src={swag.metadata.img} alt={swag.name}/>
                 {swag.name}
               </td>
               <td>USD {priceFormat(swag.unit_amount)}</td>
@@ -67,14 +68,14 @@ export default function Cart() {
           ))}
         </tbody>
       </table>
-      <nav>
-        <div>
+      <nav className="cart-nav">
+        <div className="cart-nav-items">
           <h3>Subtotal: </h3>
-          <small>USD: {priceFormat(total)}</small>
+          <small className="cart-price">USD: {priceFormat(total)}</small>
         </div>
-        <div>
+        <div className="cart-nav-items">
           <Link to='/'>
-            <button className="btn btn-light" type='outline'>Volver</button>
+            <button className="btn  btn-outline-info" type='outline'>Volver</button>
           </Link>
           <button className="btn btn-primary btn-product" onClick={handleSubmit} disabled={cart.length === 0}>Comprar</button>
         </div>

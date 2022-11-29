@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react'
-import './search.css'
+import './search.scss'
 import { CartContext } from '../context'
 
 const Search = () => {
@@ -9,16 +9,14 @@ const Search = () => {
 
   return (
   
-  <div className="search">    
-    <section className="main-input">
-          <div className="main-input-container">
-            <span className="search-icon">
-              <i className="fas fa-search"></i>
-            </span>
-            <input onChange={(e) => {handleSearch(e.target.value)}} type="search" />
-         </div>
-      </section>
-  </div>
+  <section className="search">
+      <div className="search-container">
+        <span className="search-icon">
+          <i className="fas fa-search"></i>
+        </span>
+        <input className="search-input" onChange={(e) => {handleSearch(e.target.value)}} type="search" />
+      </div>
+    </section>
   )
 }
 

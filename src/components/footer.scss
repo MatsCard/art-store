@@ -1,0 +1,29 @@
+.footer {
+  background-color: var(--main-color);
+  border-top:  1px solid #00000025;
+  color: white;
+  font-family: var(--bs-font-sans-serif);
+  & .social-item, & .social-item a {
+    color: white;
+    text-decoration: none;
+    margin-left: .3rem;
+    transition: color 750ms ease;
+    &:hover, &:hover  a {
+      color: #2a2a2a;
+      cursor: pointer;
+    }
+  }
+  &-socials .fab {
+    color: white;
+    text-decoration: none;
+    margin-left: .3rem;
+    transition: color 750ms ease;
+    &:hover {
+      color: #2a2a2a;
+      text-decoration: underline;
+    }
+  }
+  &-license {
+    border-top:  1px solid #00000050;
+  }
+}

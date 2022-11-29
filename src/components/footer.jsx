@@ -1,11 +1,11 @@
 import React from 'react'
-import './footer.css'
+import './footer.scss'
 
 
 const Footer = () => (
-  <footer className="footer-container ">
+  <footer className="footer">
     
-    <div className="container flex-column flex-md-row d-flex justify-content-between pb-3 pt-4 pt-md-5">
+    <div className="container  flex-column flex-md-row d-flex justify-content-between pb-5 pt-5 pt-md-5">
 
       <div className="about">
         <h6 className="fw-bold pb-0 pb-md-2">Contact me</h6>
@@ -18,19 +18,19 @@ const Footer = () => (
       </div>
       <div className="socials">
         <h6 className="fw-bold pb-0 pb-md-2 pt-2 pt-md-0">Socials</h6>
-        <div>
+        <div className='social-item'>
           <i className="fab fa-github"> </i>
-          <a href="https://github.com/MatsCard">Github</a>
+          <a className="footer-socials" href="https://github.com/MatsCard">Github</a>
 
         </div>
-        <div>
+        <div className='social-item'>
           <i className="fab fa-instagram"> </i>
-          <a href="https://www.instagram.com/matscard/">Instagram</a>
+          <a className="footer-socials"  href="https://www.instagram.com/matscard/">Instagram</a>
         </div>
       </div>
     </div>
 
-    <div className="footer-license pt-4 pb-2">
+    <div className="container footer-license pt-4 pb-3">
       <div className="footer-license-info container d-flex align-items-center">
         <h6>
           <i className="far fa-copyright"></i> 2021 "MatsCard" License</h6>

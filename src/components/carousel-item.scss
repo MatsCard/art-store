@@ -1,0 +1,30 @@
+.gallery-item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 1000ms all;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  margin: 40px 0;
+}
+
+
+.gallery-item:hover ~ .gallery-item {
+  -webkit-transform: translate3d(100px, 0, 0);
+          transform: translate3d(100px, 0, 0);
+}
+
+.gallery-img {
+  width: 200px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+
+

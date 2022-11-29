@@ -10,6 +10,7 @@ module.exports = {
     author: `@matscard`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     "gatsby-plugin-image",
     `gatsby-plugin-stripe`,
     "gatsby-plugin-react-helmet",

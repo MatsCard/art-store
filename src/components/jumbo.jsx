@@ -1,9 +1,8 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
-import monaLisa from './../images/monalisa2.svg'
 
 const JumboText = {
-  color: "#1962d0"
+  color: " var(--dark-main-color)"
 }
 
 const Jumbo = () => (
@@ -11,12 +10,11 @@ const Jumbo = () => (
     <div className="row align-items-center">
 
     <h1 style={JumboText} className="col col-7">
-      The best artsy store in the planet, get a piece of someone soul here!!
-
+      The best artsy <strong>store</strong> in the planet, get a piece of someone <strong>soul</strong>  here!!
     </h1>
     <StaticImage className="col col-5"
     src='./../images/monalisa.png' 
-    alt="Mona Lisa" 
+    alt="jumbo" 
     width={500}/>
     </div>
 

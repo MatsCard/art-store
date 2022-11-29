@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import priceFormat from '../utils/priceFormat'
-import './products.css'
+import './products.scss'
 import { CartContext } from '../context'
 
 export default function Products({ products }) {
@@ -22,18 +22,18 @@ export default function Products({ products }) {
 
   return (
     <section className="products container">
-      <h2>Products</h2>
-      <section>
+      <h2 className="products-title">Products</h2>
+      <section className="products-single">
         {productsSearched.map(({ node }) => {
           if (node.product.active) {
             const price = priceFormat(node.unit_amount)
             return (
-              <article key={node.id}>
-                <img className="img-fluid" src={node.product.metadata.img} alt={node.product.name} />
-                <p>{node.product.name}</p>
-                <small>USD {price}</small>
-                <Link to={`/${node.id}`}>
-                    Buy Now <span>→</span>
+              <article className="products-article" key={node.id}>
+                <img className="img-fluid products-img " src={node.product.metadata.img} alt={node.product.name} />
+                <p className="products-name">{node.product.name}</p>
+                <small  className="products-currency">USD {price}</small>
+                <Link to={`/${node.id}`} className="products-cta">
+                    Buy Now <span className="products-arrow">→</span>
                 </Link>
               </article>
             )
@@ -44,4 +44,7 @@ export default function Products({ products }) {
       </section>
     )
   }
+  
+
+
   

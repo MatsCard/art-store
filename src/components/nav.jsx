@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Search from './search'
 import { Link } from 'gatsby'
 import { CartContext } from '../context'
-import './nav.css';
+import './nav.scss';
 
 const navStyle = {
   backgroundColor: "#1992d0",
@@ -32,7 +32,7 @@ const Nav = () => {
       <div className="nav-content d-flex container justify-content-between">
         <h4 className="nav-phone text-white pt-1">
           <i className="fas fa-phone"></i>
-          +54 341 5631239
+          +54 124 6666666
           </h4>
           <Search />
 
