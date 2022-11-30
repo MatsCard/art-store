@@ -44,6 +44,7 @@
     font-weight: 500;
   }
   &-cta {
+    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
     border-bottom: 3px solid var(--main-color);
     color: #1c3643;
     font-size: 0.8rem;

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'gatsby'/* 
-import { Button, StyledCart } from '../styles/components' */
+import { Link } from 'gatsby'
 import priceFormat from '../utils/priceFormat'
 import { CartContext } from '../context'
 import './cart.scss'
@@ -31,18 +30,12 @@ export default function Cart() {
       quantity: qty,
     }))
 
-    console.log(item)
-    console.log(process.env.GATSBY_SUCCESS_REDIRECT)
-    console.log(typeof (process.env.GATSBY_SUCCESS_REDIRECT))
-    console.log(stripe)
 
     const { error } = await stripe.redirectToCheckout({
       lineItems: item,
-      mode: 'payment',/* 
-      successUrl: process.env.SUCCESS_REDIRECT,
-      cancelUrl: process.env.CANCEL_REDIRECT, */
-      successUrl: "https://matscard-art-store.netlify.app/success",
-      cancelUrl: "https://matscard-art-store.netlify.app/cancel",
+      mode: 'payment',
+      successUrl: process.env.GATSBY_SUCCESS_REDIRECT,
+      cancelUrl: process.env.GATSBY_CANCEL_REDIRECT,
    })
    if (error) {
       throw error

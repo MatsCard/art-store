@@ -24,7 +24,7 @@ const cartBadge = {
 const Nav = () => {
 
   
-  const { cart, setCart } = useContext(CartContext)
+  const { cart } = useContext(CartContext)
   return(
     <div className="" style={navContainer}>
     <nav style={navStyle}>
@@ -41,7 +41,7 @@ const Nav = () => {
             <i className="fas fa-shopping-cart"></i>
           </h4>
 
-          { (cart.length != 0 )  &&
+          { (cart.length !== 0 )  &&
             <span style={cartBadge} className="position-absolute cart-badge start-100 translate-middle badge rounded-circle bg-danger">  
               {cart.length}
             </span>}

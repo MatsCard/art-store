@@ -11,3 +11,42 @@
     display: initial;
   }
 }
+
+
+
+.cart-badge {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* 
+.cart-badge {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+ */
+
+ 
+
+@-webkit-keyframes tada {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+@keyframes tada {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
